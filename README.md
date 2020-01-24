@@ -1,9 +1,6 @@
 # stocks
 
 is to read it in
-linux4[161]% cat README.txt 
-
-is to read it in
 and isolate the last price of every month
 and calculate the percentage change from the previous months price
 youll want to use the "Adj Close" price
