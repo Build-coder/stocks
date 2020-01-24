@@ -1,6 +1,6 @@
 import csv
 
-with open('stocks.csv') as c_file:
+with open('stocks.csv') as _file:
     csv_reader = csv.reader(_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
