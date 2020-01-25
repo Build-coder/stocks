@@ -26,7 +26,7 @@ so with this exercise youll practice reading files, working with dates, and a li
 and it can be built upon too
 
 ---------------------------------------------------------------------
-1.) how do I isolate the last day of each month? 
+1.) how do I isolate the last day of each month? just look for first of the month then go back 1
 2.) subtract last month Adj Close with month prior to that = difference
 3.) divide difference by month prior = pre_percentage
 4.) pre_percentage multiply by 100 = percentage_change
