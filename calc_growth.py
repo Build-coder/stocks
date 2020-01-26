@@ -50,7 +50,6 @@ def monthly_change(last_days):
     return value_change
 
 
-
 def calculate_change(adj_close):
 
     value_change = []
