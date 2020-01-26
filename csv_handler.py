@@ -8,30 +8,25 @@ def get_last_days():
 
         days = []
         last_days = []
-        count = 0
-        tracker = []
 
         for line in csv_reader:
 
             day = int(line['Date'][8])*10+int(line['Date'][9])
             days.append(day)
 
-        for i in range(len(days)):
 
-            count = count + 1
+        for i in range(len(days)):
 
             if days[i-1] > days[i]:
 
-                count = count - 2
+                date = days[i-1]
 
-                tracker.append(count)
-
-                print(tracker)
-                #last_days.append(str(days[i-1]))
+                last_days.append(str(date))
 
     csv_file.close()
 
     return last_days
+
 
 
 def monthly_change(last_days):
@@ -44,15 +39,25 @@ def monthly_change(last_days):
 
             date = line['Date'].split('-')
 
+            day = date[2]
 
-            #for string in date:
 
-                #print(date)
+            if day == last_days[0]:
 
-                #if string in last_days:
+                print(line)
+                print()
 
-                    #print('Date: '+line['Date'], '  Adj Close: $'+line['Adj Close'])
+                last_days.pop(len(last_days)*-1)
 
+                print(last_days)
+
+
+
+
+
+                if last_days == []:
+
+                    break
 
 if __name__ == '__main__':
 
@@ -63,12 +68,3 @@ if __name__ == '__main__':
     print(lst)
 
     monthly_change(lst)
-
-
-"""
-
-    if new_line in avj_close_days:
-
-        #print('Date: '+line['Date'], '  Adj Close: $'+line['Adj Close'])
-
-"""
