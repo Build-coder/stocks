@@ -54,7 +54,12 @@ def calculate_change(adj_close):
 
     value_change = []
 
+    
+    #should iterate len(adj_close) not len(adj_close)-1
     for price in range(len(adj_close)-1):
+        #at end of list, adj_close[1] won't exist. need a check 
+        #here to ensure adj_close[1] exists. if it doesn't exist,
+        #include a break I guess
         difference = adj_close[1] - adj_close[0]
         pre_percentage = difference / adj_close[0]
         percentage_change = pre_percentage * 100
